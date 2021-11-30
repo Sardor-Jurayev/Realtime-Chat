@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
  })
 
 
-
 // run when  client connects
 io.on('connection', socket => {
 
@@ -39,10 +38,10 @@ io.on('connection', socket => {
         .emit('message', formatMessage(ChatBot, `${user.username} has joined the chat`));
     
     // Send user and room info
-    io.to(user.room).emit('roomUser', {
+        io.to(user.room).emit('roomUser', {
         room: user.room,
         user: getRoomUsers(user.room)
-    });
+        });
 
     });
 
