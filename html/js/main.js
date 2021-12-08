@@ -77,7 +77,7 @@ function outputRoomName(room) {
 document.getElementById('leave-btn').addEventListener('click', (resultat) => {
   if (resultat) {
     confirm('Are you sure you want to leave the chatroom?')
-    window.location = 'index.html';
+    sendFile('/Users/sardor.jurayev/Documents/nodeJS/Realtimne-Chat/html/index.html');
   } else {
   }
 });
